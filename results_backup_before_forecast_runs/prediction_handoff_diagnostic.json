@@ -1,0 +1,61 @@
+{
+  "evaluation_type": "chronological-tail diagnostic of precomputed predictions",
+  "valid_model_test_claim": false,
+  "warning": "Upstream training, scaler, forecast horizon, and prediction-generation provenance are absent. Predictions may have been generated using information from this segment; do not call this a validated unseen test.",
+  "source_file": "person2_scheduler_input.csv",
+  "rows_total": 1094,
+  "rows_diagnostic_tail": 219,
+  "holdout_fraction_requested": 0.2,
+  "timestamp_column": "timestamp_ms",
+  "timestamp_note": "Column name retained from source; units are not inferred or converted.",
+  "first_tail_timestamp_value": 1378439654.0,
+  "last_tail_timestamp_value": 1378506560.0,
+  "overload_threshold_cpu": 80.0,
+  "label_definition": "actual_cpu >= 80.0",
+  "results": {
+    "bilstm": {
+      "cpu_regression": {
+        "mae": 3.882622215388128,
+        "rmse": 10.258502772352655,
+        "r2": 0.26438848286371
+      },
+      "overload_classification": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix_tn_fp_fn_tp": [
+          [
+            217,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      }
+    },
+    "persistence": {
+      "cpu_regression": {
+        "mae": 2.582039524931507,
+        "rmse": 8.736616481473817,
+        "r2": 0.46645985442576077
+      },
+      "overload_classification": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "confusion_matrix_tn_fp_fn_tp": [
+          [
+            216,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

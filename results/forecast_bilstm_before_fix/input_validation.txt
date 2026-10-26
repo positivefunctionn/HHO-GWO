@@ -1,0 +1,12 @@
+Input validation report
+row_count: 1094
+errors: []
+valid: True
+schema: person1_bilstm_handoff
+forecast_mode: bilstm
+prediction_cpu_column: bilstm_predicted_cpu
+prediction_label_column: bilstm_predicted_overload
+risk_score_source: bilstm_predicted_overload: binary 0/1 label, not a calibrated probability
+input_columns: ['actual_cpu', 'bilstm_predicted_cpu', 'bilstm_predicted_overload', 'persistence_predicted_cpu', 'persistence_predicted_overload', 'timestamp_ms']
+overload_threshold: 80.0
+note: Original CSV fields are preserved. Actual CPU is for post-hoc evaluation only. Verify the timestamp unit before interpreting timestamps.
